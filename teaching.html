@@ -1,17 +1,90 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="utf-8">
   <title>Teaching - Tara Hein</title>
-  <link rel="stylesheet" href="index.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- icons/fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css">
+  <link rel="icon" href="headshot.png">
+  <!-- same styles as index -->
+  <style>
+    :root{--page-w:1100px;--border:#e6e6e6;--link:#0b66c3;--muted:#666;--text:#222;--bg:#fff;--nav:#6a6a6a}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.65}
+    a{color:var(--link)}
+    .masthead{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--border)}
+    .masthead__inner-wrap{max-width:var(--page-w);margin:0 auto;padding:.7rem 1rem}
+    .greedy-nav{display:flex;align-items:center}
+    .visible-links{list-style:none;display:flex;gap:1rem;margin:0;padding:0}
+    .masthead__menu-item a{color:var(--nav);text-decoration:none;font-weight:600}
+    .masthead__menu-item a:hover{text-decoration:underline}
+    .masthead__menu-item--lg a{font-weight:700;color:#333;white-space:nowrap}
+    .greedy-nav > button{display:none;border:0;background:transparent;width:36px;height:36px;border-radius:6px;cursor:pointer}
+    .greedy-nav .navicon,.greedy-nav .navicon:before,.greedy-nav .navicon:after{display:block;width:20px;height:2px;background:var(--nav);content:"";position:relative}
+    .greedy-nav .navicon:before{position:absolute;top:-6px}
+    .greedy-nav .navicon:after{position:absolute;top:6px}
+    #main{max-width:var(--page-w);margin:0 auto;display:grid;grid-template-columns:260px 1fr;gap:2rem;padding:1.25rem 1rem 2rem}
+    .sidebar{position:sticky;top:72px;align-self:start}
+    .author__avatar img{width:100%;display:block;border-radius:50%;border:none}
+    .author__bio{color:var(--muted);margin:.25rem 0 .75rem}
+    .author__urls{list-style:none;margin:.5rem 0 0;padding:0}
+    .author__urls li{margin:.35rem 0}
+    .page__title{font-size:1.9rem;margin:.25rem 0 1rem}
+    @media (max-width:900px){
+      #main{grid-template-columns:1fr}
+      .sidebar{position:static}
+      .greedy-nav > button{display:block}
+      .visible-links{display:none;flex-direction:column;align-items:flex-start;padding-top:.5rem}
+      .visible-links.open{display:flex}
+    }
+  </style>
 </head>
 <body>
-  <!-- same header/sidebar -->
-  <article class="page">
-    <h1 class="page__title">Teaching</h1>
-    <ul>
-      <li>Undergraduate TA, PUBLPOL 141: <em>Monitoring the Crisis</em>, Stanford University — 2020–2021</li>
-    </ul>
-  </article>
+  <div class="masthead">
+    <div class="masthead__inner-wrap">
+      <nav id="site-nav" class="greedy-nav">
+        <button aria-label="Toggle menu"><div class="navicon"></div></button>
+        <ul class="visible-links">
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="index.html">Tara Hein</a></li>
+          <li class="masthead__menu-item"><a href="research.html">Research</a></li>
+          <li class="masthead__menu-item"><a href="teaching.html">Teaching</a></li>
+          <li class="masthead__menu-item"><a href="photography.html">Photography</a></li>
+          <li class="masthead__menu-item"><a href="2025.11.05%20Hein_CV_V1.pdf" target="_blank" rel="noopener">CV</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div id="main" role="main">
+    <aside class="sidebar">
+      <div class="author__avatar"><img src="headshot.png" alt="Tara Hein"></div>
+      <h3 class="author__name">Tara Hein</h3>
+      <p class="author__bio">Ph.D. Student, Government, Harvard University</p>
+      <ul class="author__urls">
+        <li><i class="fa-solid fa-building-columns"></i> Harvard University</li>
+        <li><a href="mailto:tarahein@g.harvard.edu"><i class="fa-solid fa-envelope"></i> Email</a></li>
+        <li><a href="https://scholar.google.com/citations?hl=en&user=rzQtlS0AAAAJ" target="_blank" rel="noopener"><i class="ai ai-google-scholar"></i> Google Scholar</a></li>
+        <li><a href="https://orcid.org/0009-0004-6474-3484" target="_blank" rel="noopener"><i class="ai ai-orcid"></i> ORCID</a></li>
+        <li><a href="https://www.linkedin.com/in/tara-hein/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+      </ul>
+    </aside>
+
+    <article class="page">
+      <h1 class="page__title">Teaching</h1>
+      <ul>
+        <li>Undergraduate TA, PUBLPOL 141: <em>Monitoring the Crisis</em>, Stanford University — 2020–2021</li>
+      </ul>
+    </article>
+  </div>
+
+  <script>
+    (function(){
+      var btn=document.querySelector('.greedy-nav > button');
+      var links=document.querySelector('.visible-links');
+      if(btn&&links){btn.addEventListener('click',function(){links.classList.toggle('open');});}
+    })();
+  </script>
 </body>
 </html>
