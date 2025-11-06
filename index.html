@@ -6,15 +6,40 @@
   <title>Tara Hein</title>
   <style>
     :root { --w: 780px; --link: #0b66c3; --muted:#5b5b5b; }
-    body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-           margin:2.5rem auto; padding:0 1.1rem; line-height:1.65; color:#222; max-width:var(--w);}
-    header {display:grid; grid-template-columns:120px 1fr; gap:1.25rem; align-items:center; margin-bottom:1.25rem;}
-    header img {width:120px; height:120px; object-fit:cover; border-radius:50%; border:1px solid #e5e5e5;}
+    body {
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      margin:2.5rem auto; padding:0 1.1rem;
+      line-height:1.65; color:#222; max-width:var(--w);
+    }
+    header {
+      display:grid;
+      grid-template-columns:180px 1fr;
+      gap:1.75rem;
+      align-items:center;
+      margin-bottom:1.5rem;
+    }
+    header img {
+      width:180px;
+      height:auto;
+      object-fit:cover;
+      border-radius:8px; /* rectangular headshot with soft corners */
+      border:1px solid #e5e5e5;
+    }
     h1 {font-size:1.9rem; margin:0; line-height:1.2;}
     .subtitle {color:var(--muted); margin-top:.25rem;}
-    nav {border-top:1px solid #e9e9e9; border-bottom:1px solid #e9e9e9; margin:1rem 0 1.5rem;}
-    nav a {display:inline-block; padding:.6rem .2rem; margin-right:1rem; color:inherit;
-           text-decoration:none; font-weight:600;}
+    nav {
+      border-top:1px solid #e9e9e9;
+      border-bottom:1px solid #e9e9e9;
+      margin:1rem 0 1.5rem;
+    }
+    nav a {
+      display:inline-block;
+      padding:.6rem .2rem;
+      margin-right:1rem;
+      color:inherit;
+      text-decoration:none;
+      font-weight:600;
+    }
     nav a:hover {color:var(--link); text-decoration:underline;}
     section {padding:.25rem 0 1.25rem;}
     h2 {font-size:1.25rem; margin:1.25rem 0 .5rem;}
@@ -22,12 +47,28 @@
     a {color:var(--link);}
     .muted {color:var(--muted);}
     ul {padding-left:1.2rem;}
-    .card {border:1px solid #eee; border-radius:10px; padding:.9rem 1rem; background:#fafafa;}
-    figure {margin:0;}
-    .photo-grid {display:grid; grid-template-columns:repeat(auto-fill,minmax(160px,1fr)); gap:10px;}
-    .photo-grid img {width:100%; height:160px; object-fit:cover; border-radius:8px; border:1px solid #e8e8e8;}
-    footer {border-top:1px solid #e9e9e9; margin-top:1rem; padding-top:.9rem; color:#666; font-size:.95rem;}
-    @media (max-width:700px){header{grid-template-columns:90px 1fr;} header img{width:90px;height:90px;}}
+    .photo-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(160px,1fr));
+      gap:10px;
+    }
+    .photo-grid img {
+      width:100%; height:160px;
+      object-fit:cover;
+      border-radius:8px;
+      border:1px solid #e8e8e8;
+    }
+    footer {
+      border-top:1px solid #e9e9e9;
+      margin-top:1rem;
+      padding-top:.9rem;
+      color:#666;
+      font-size:.95rem;
+    }
+    @media (max-width:700px){
+      header{grid-template-columns:120px 1fr;}
+      header img{width:120px;}
+    }
   </style>
 </head>
 <body>
@@ -37,40 +78,44 @@
   <div>
     <h1>Tara Hein</h1>
     <div class="subtitle">Ph.D. Student · Department of Government, Harvard University</div>
-    <div class="muted">Citizen–state relations in Latin America </div>
+    <div class="muted">Citizen–state relations in Latin America</div>
   </div>
 </header>
 
+<!-- About -->
+<section id="about">
+  <p>
+    Hi, I’m Tara. I’m a Ph.D. student and Presidential Scholar in the Department of Government at Harvard University. 
+    My research examines citizen–state relations in Latin America, focusing on how perceptions of state failure shape 
+    democratic attitudes and political behavior. I’m particularly interested in why democratic backsliding occurs even 
+    in high-performing institutional contexts.
+  </p>
+  <p>
+    Before graduate school, I was the Democracy Impact Coordinator at the philanthropic organization VélezReyes+, where 
+    I helped develop political leadership incubators in Costa Rica, Colombia, Peru, Brazil, Chile, Argentina, and Uruguay. 
+    I also supported the design of a randomized controlled trial assessing how managerial and democratic training influences 
+    mayoral performance in Peru.
+  </p>
+  <p>
+    I received my B.A. in Political Science with Distinction and Interdisciplinary Honors in Democracy, Development, and 
+    the Rule of Law from Stanford University. My honors thesis, <em>“Seeing Like a Citizen: Fragmented Citizenship in Santiago 
+    de Chile,”</em> explored how perceptions of state performance affect democratic legitimacy.
+  </p>
+  <p>
+    I am currently an External Affiliate of the Poverty, Violence, and Governance Lab and a Graduate Student Affiliate of 
+    the Democracy Action Lab, both at Stanford University’s Center on Democracy, Development, and the Rule of Law.
+  </p>
+  <p>
+    You can reach me at <a href="mailto:tarahein@g.harvard.edu">tarahein@g.harvard.edu</a>.
+  </p>
+</section>
+
 <nav aria-label="Primary">
-  <a href="#education">Education</a>
-  <a href="#affiliations">Affiliations</a>
   <a href="#working">Working Papers</a>
   <a href="#photography">Photography</a>
   <a href="#cv">CV</a>
   <a href="#contact">Contact</a>
 </nav>
-
-<section id="education">
-  <h2>Education</h2>
-  <ul>
-    <li><strong>Harvard University</strong> — Ph.D. in Government (2025–).<br>
-        Presidential Scholar, Graduate School of Arts and Sciences.</li>
-    <li><strong>Stanford University</strong> — B.A. Political Science, with Distinction (June 2023).<br>
-        Interdisciplinary Honors in Democracy, Development, and the Rule of Law.<br>
-        Thesis: <em>Seeing Like a Citizen: Fragmented Citizenship in Santiago de Chile</em>.<br>
-        Advisors: Beatriz Magaloni and Jeremy Weinstein.</li>
-    <li><strong>Universidad de Chile</strong>, Facultad de Gobierno — Study Abroad (Jan–Mar 2022).</li>
-    <li><strong>University of Oxford</strong>, Latin American Centre — Study Abroad (Sep–Dec 2021).</li>
-  </ul>
-</section>
-
-<section id="affiliations">
-  <h2>Academic Affiliations</h2>
-  <ul>
-    <li>External Affiliate, Poverty, Violence, and Governance Lab, Stanford University (2025–).</li>
-    <li>Graduate Student Affiliate, Democracy Action Lab, Stanford University (2025–).</li>
-  </ul>
-</section>
 
 <section id="working">
   <h2>Working Papers</h2>
@@ -123,6 +168,10 @@
   © <span id="year"></span> Tara Hein · Built with GitHub Pages
 </footer>
 
-<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
+
