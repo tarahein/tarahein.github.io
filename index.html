@@ -2,80 +2,247 @@
 <html lang="en" class="no-js">
 <head>
   <meta charset="utf-8">
-  <!-- begin SEO -->
   <title>Welcome! - Tara Hein</title>
   <meta property="og:locale" content="en-US">
   <meta property="og:site_name" content="Tara Hein">
   <meta property="og:title" content="Welcome!">
-  <link rel="canonical" href="https://your-domain.example/">
-  <meta property="og:url" content="https://your-domain.example/">
-  <script type="application/ld+json">
-  {
-    "@context" : "http://schema.org",
-    "@type" : "Person",
-    "name" : "Tara Hein",
-    "url" : "https://your-domain.example",
-    "sameAs" : null
-  }
-  </script>
-  <!-- end SEO -->
-
-  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Tara Hein Feed">
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
+  <link rel="canonical" href="./">
+  <meta property="og:url" content="./">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Swap no-js -> js (same as original) -->
   <script>
     document.documentElement.className =
       document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
   </script>
 
-  <!-- For all browsers: use your copy of the theme CSS here -->
-  <link rel="stylesheet" href="/assets/css/main.css">
-  <meta http-equiv="cleartype" content="on">
-
-  <!-- start custom head snippets -->
-  <link rel="apple-touch-icon" sizes="57x57" href="/images/apple-touch-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/images/apple-touch-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/images/apple-touch-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/images/apple-touch-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/images/apple-touch-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/images/apple-touch-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-180x180.png">
-  <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="/images/android-chrome-192x192.png" sizes="192x192">
-  <link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96">
-  <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
-  <link rel="manifest" href="/images/manifest.json">
-  <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#000000">
-  <link rel="shortcut icon" href="/images/favicon.ico">
-  <meta name="msapplication-TileColor" content="#000000">
-  <meta name="msapplication-TileImage" content="/images/mstile-144x144.png">
-  <meta name="msapplication-config" content="/images/browserconfig.xml">
-  <meta name="theme-color" content="#ffffff">
-
-  <!-- Academicons (optional, used for academic links if you add later) -->
-  <link rel="stylesheet" href="/assets/css/academicons.css"/>
-
-  <!-- Font Awesome for icons (building, envelope, LinkedIn) -->
+  <!-- Icons (Font Awesome) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-  <!-- Support for MathJax, if needed -->
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  <!-- end custom head snippets -->
-
-  <!-- Your masonry photo-grid styles (minimal, additive) -->
+  <!-- Minimal, inlined CSS that mimics Minimal Mistakes structure you copied -->
   <style>
-    .photo-masonry { columns: 3 280px; column-gap: 10px; }
-    .photo-masonry figure { break-inside: avoid; margin: 0 0 10px; }
-    .photo-masonry img {
-      width: 100%; height: auto; display: block;
-      border-radius: 8px; border: 1px solid #e8e8e8;
+    :root{
+      --maxw: 1100px;
+      --border:#e6e6e6;
+      --link:#0b66c3;
+      --muted:#666;
+      --text:#222;
+      --bg:#fff;
     }
-    @media (max-width: 900px){ .photo-masonry { columns: 2 260px; } }
-    @media (max-width: 600px){ .photo-masonry { columns: 1 100%; } }
-    .icon-pad-right { margin-right:.5rem;
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      color:var(--text); background:var(--bg); line-height:1.65;
+    }
+
+    /* Masthead (matches classes/behavior from your snippet) */
+    .masthead{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--border)}
+    .masthead__inner-wrap{max-width:var(--maxw);margin:0 auto;padding:.7rem 1rem}
+    .masthead__menu{display:flex;align-items:center}
+    .greedy-nav{display:flex;align-items:center;width:100%}
+    .greedy-nav > button{border:0;background:transparent;width:36px;height:36px;border-radius:6px;display:none;align-items:center;justify-content:center;cursor:pointer}
+    .greedy-nav .navicon{width:20px;height:2px;background:#000;position:relative}
+    .greedy-nav .navicon:before,.greedy-nav .navicon:after{content:"";position:absolute;left:0;width:20px;height:2px;background:#000}
+    .greedy-nav .navicon:before{top:-6px}.greedy-nav .navicon:after{top:6px}
+    .visible-links,.hidden-links{list-style:none;margin:0;padding:0;display:flex;gap:1rem;align-items:center}
+    .hidden{display:none}
+    .masthead__menu-item a{color:inherit;text-decoration:none;font-weight:600;padding:.4rem 0}
+    .masthead__menu-item a:hover{color:var(--link);text-decoration:underline}
+    .masthead__menu-item--lg a{font-weight:700;white-space:nowrap}
+
+    /* Layout: sidebar + main content */
+    #main{max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:260px 1fr;gap:2rem;padding:1.25rem 1rem 2rem}
+    .sidebar.sticky{position:sticky;top:72px;align-self:start}
+    .author__avatar img{width:100%;height:auto;display:block;border-radius:10px;border:1px solid var(--border)}
+    .author__content .author__name{margin:.8rem 0 .2rem;font-size:1.25rem}
+    .author__bio{color:var(--muted);margin:0 0 .5rem}
+    .author__urls-wrapper .btn{display:inline-flex;align-items:center;gap:.5rem;border-radius:8px;border:1px solid #000;background:#000;color:#fff;padding:.5rem .8rem;text-decoration:none;font-weight:600;margin:.25rem 0}
+    .author__urls{list-style:none;margin:.5rem 0 0;padding:0}
+    .author__urls li{margin:.35rem 0;display:flex;align-items:center}
+    .author__urls a{color:var(--link);text-decoration:none}
+    .author__urls a:hover{text-decoration:underline}
+    .icon-pad-right{margin-right:.5rem}
+
+    /* Page content */
+    .page__inner-wrap header h1{font-size:1.9rem;line-height:1.2;margin:.25rem 0 1rem}
+    .page__content a{color:var(--link)}
+    h2{font-size:1.25rem;margin:1.25rem 0 .5rem}
+    p{margin:.6rem 0}
+
+    /* Masonry photo grid (yours, unchanged) */
+    .photo-masonry{columns:3 280px;column-gap:10px}
+    .photo-masonry figure{break-inside:avoid;margin:0 0 10px}
+    .photo-masonry img{width:100%;height:auto;display:block;border-radius:8px;border:1px solid #e8e8e8}
+    @media (max-width:900px){.photo-masonry{columns:2 260px}}
+    @media (max-width:600px){.photo-masonry{columns:1 100%}}
+
+    /* Responsive nav & layout */
+    @media (max-width:900px){
+      #main{grid-template-columns:1fr}
+      .sidebar.sticky{position:static}
+      .greedy-nav > button{display:flex}
+      .visible-links{display:none}
+      .visible-links.open{display:flex;flex-direction:column;align-items:flex-start;padding-top:.5rem}
+    }
+  </style>
+</head>
+<body>
+  <div class="masthead">
+    <div class="masthead__inner-wrap">
+      <div class="masthead__menu">
+        <nav id="site-nav" class="greedy-nav">
+          <button aria-label="Toggle menu"><div class="navicon"></div></button>
+          <ul class="visible-links">
+            <li class="masthead__menu-item masthead__menu-item--lg"><a href="./">Tara Hein</a></li>
+            <li class="masthead__menu-item"><a href="#about">About</a></li>
+            <li class="masthead__menu-item"><a href="#working">Working Papers</a></li>
+            <li class="masthead__menu-item"><a href="#photography">Photography</a></li>
+            <li class="masthead__menu-item"><a href="2025.11.05 Hein_CV_V1.pdf" target="_blank">CV</a></li>
+          </ul>
+          <ul class="hidden-links hidden"></ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <div id="main" role="main">
+    <!-- LEFT SIDEBAR -->
+    <div class="sidebar sticky">
+      <div itemscope itemtype="http://schema.org/Person">
+        <div class="author__avatar">
+          <img src="headshot.png" class="author__avatar" alt="Tara Hein">
+        </div>
+        <div class="author__content">
+          <h3 class="author__name">Tara Hein</h3>
+          <p class="author__bio">Ph.D. Student</p>
+        </div>
+
+        <div class="author__urls-wrapper">
+          <!-- Email button -->
+          <a class="btn btn--inverse" href="mailto:tarahein@g.harvard.edu">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>Email
+          </a>
+
+          <ul class="author__urls social-icons">
+            <!-- Affiliation -->
+            <li class="author__desktop">
+              <i class="fa-solid fa-building-columns icon-pad-right" aria-hidden="true"></i>Harvard University
+            </li>
+            <!-- LinkedIn -->
+            <li>
+              <a href="https://www.linkedin.com/in/tara-hein/" target="_blank" rel="noopener">
+                <i class="fab fa-linkedin fa-fw icon-pad-right" aria-hidden="true"></i>LinkedIn
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="headline" content="Welcome!">
+      <div class="page__inner-wrap">
+        <header>
+          <h1 class="page__title" itemprop="headline">Welcome!</h1>
+        </header>
+
+        <section id="about" class="page__content" itemprop="text">
+          <p>
+            Hi, I’m Tara. I’m a Ph.D. student and Presidential Scholar in the Department of Government at Harvard University. 
+            My research examines citizen–state relations in Latin America, focusing on how perceptions of state failure shape 
+            democratic attitudes and political behavior. I’m particularly interested in the causes and consequences of waning 
+            support for democracy in contexts with historically high-performing institutions, like Chile, Costa Rica, and Uruguay.
+          </p>
+
+          <p>
+            I received my B.A. in Political Science with Distinction and Interdisciplinary Honors in Democracy, Development, and 
+            the Rule of Law from Stanford University. My award-winning honors thesis, <em>“Seeing Like a Citizen: Fragmented Citizenship in Santiago 
+            de Chile,”</em> examined how socioeconomically vulnerable individuals conceptualize and exercise their citizenship and received the 
+            <a href="https://undergrad.stanford.edu/awards-and-graduation-honors/golden-firestone-and-kennedy-thesis-awards" target="_blank" rel="noopener">Firestone Medal for Excellence in Undergraduate Research</a>.
+          </p>
+
+          <p>
+            I am currently a research affiliate at the 
+            <a href="https://povgov.com/" target="_blank" rel="noopener">Poverty, Violence, and Governance Lab</a> and the 
+            <a href="https://cddrl.fsi.stanford.edu/dal" target="_blank" rel="noopener">Democracy Action Lab</a>, 
+            both at Stanford University’s Center on Democracy, Development, and the Rule of Law.
+          </p>
+
+          <p>
+            I am from Monteverde, a small village in the Costa Rican cloud forest—one of the most biodiverse places on Earth. 
+            I grew up outdoors, riding horses, and attended a small bilingual Quaker school from the age of three until graduating from high school.
+          </p>
+
+          <p>
+            Before graduate school, I was the Democracy Impact Coordinator at the Latin American philanthropic organization VélezReyes+, 
+            where I developed a network of political leadership incubators across 7 countries: Argentina, Brazil, Chile, Colombia, Costa Rica, Peru, and Uruguay.
+          </p>
+
+          <p>You can reach me at <a href="mailto:tarahein@g.harvard.edu">tarahein@g.harvard.edu</a>.</p>
+        </section>
+
+        <section id="working">
+          <h2>Working Papers</h2>
+          <ul>
+            <li><em>“Democracy in Costa Rica.”</em> In <em>Central America’s Democratic Crisis: Drivers of Backsliding and Sources of Resilience</em>, 
+                edited by Steve Levitsky and Manuel Meléndez-Sánchez (book chapter in progress).</li>
+            <li><em>“Seeing Like a Citizen: Fragmented Citizenship in Santiago de Chile.”</em> (manuscript in preparation, based on undergraduate honors thesis).</li>
+          </ul>
+        </section>
+
+        <section id="photography">
+          <h2>Photography</h2>
+          <p class="muted">A few shots from fieldwork and home.</p>
+
+          <div class="photo-masonry">
+            <!-- Your photos -->
+            <figure><img src="DSC09457.JPG" alt="Photo 1"></figure>
+            <figure><img src="6E85A52E-589C-4B1E-8223-B311E3F2D518.jpg" alt="Photo 2"></figure>
+            <figure><img src="DSC08791.JPG" alt="Photo 3"></figure>
+            <figure><img src="AB1AB1F1-A590-4756-AF0B-CE62948C9D9F.jpg" alt="Photo 4"></figure>
+            <figure><img src="DSC00310.JPG" alt="Photo 5"></figure>
+            <figure><img src="DSC08466.JPG" alt="Photo 6"></figure>
+            <figure><img src="4B126550-F957-494C-9FBB-16026E8C24CC.jpg" alt="Photo 7"></figure>
+            <figure><img src="DSC07935.JPG" alt="Photo 8"></figure>
+            <figure><img src="5277CB0A-8BD8-47AC-9E68-E219C19C3E06.jpg" alt="Photo 9"></figure>
+            <figure><img src="DSC08796.JPG" alt="Photo 10"></figure>
+            <figure><img src="DSC00321.JPG" alt="Photo 11"></figure>
+            <figure><img src="DSC09533.JPG" alt="Photo 12"></figure>
+            <figure><img src="DSC00326.JPG" alt="Photo 13"></figure>
+            <figure><img src="7C9950E5-24FD-4530-9823-9B47D4473AF3.jpg" alt="Photo 14"></figure>
+            <figure><img src="IMG_3352.jpeg" alt="Photo 15"></figure>
+            <figure><img src="DSC00262.JPG" alt="Photo 16"></figure>
+            <figure><img src="DSC00312.JPG" alt="Photo 17"></figure>
+            <figure><img src="DSC00239.JPG" alt="Photo 18"></figure>
+            <figure><img src="DSC00493.JPG" alt="Photo 19"></figure>
+            <figure><img src="DSC08483.JPG" alt="Photo 20"></figure>
+          </div>
+        </section>
+
+        <section id="cv">
+          <h2>Curriculum Vitae</h2>
+          <p><strong><a href="2025.11.05 Hein_CV_V1.pdf" target="_blank" rel="noopener">Download my CV</a></strong></p>
+        </section>
+
+        <footer class="page__meta"></footer>
+      </div>
+    </article>
+  </div>
+
+  <!-- Tiny JS to toggle mobile nav (replaces the theme's main.min.js need) -->
+  <script>
+    (function(){
+      var btn = document.querySelector('.greedy-nav > button');
+      var list = document.querySelector('.visible-links');
+      if(btn && list){
+        btn.addEventListener('click', function(){
+          list.classList.toggle('open');
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
+
