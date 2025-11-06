@@ -45,6 +45,23 @@
       .photo-masonry { columns: 2 260px; }
     }
     @media (max-width:600px){ .photo-masonry { columns: 1 100%; } }
+    /* Responsive photo size for smaller screens */
+@media (max-width: 900px) {
+  .author__avatar img {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 1rem;
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .author__avatar img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
   </style>
 </head>
 <body>
