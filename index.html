@@ -1,397 +1,74 @@
 <!doctype html>
 <html lang="en" class="no-js">
-  <head>
-    <meta charset="utf-8">
-
-    <!-- begin SEO -->
-    <title>Tara Hein</title>
-    <meta property="og:locale" content="en-US">
-    <meta property="og:site_name" content="Tara Hein">
-    <meta property="og:title" content="Welcome!">
-    <link rel="canonical" href="https://tarahein.github.io/">
-    <meta property="og:url" content="https://tarahein.github.io/">
-    <script type="application/ld+json">
-      {
-        "@context": "http://schema.org",
-        "@type": "Person",
-        "name": "Tara Hein",
-        "url": "https://tarahein.github.io",
-        "sameAs": null
-      }
-    </script>
-    <!-- end SEO -->
-
-    <!-- Atom feed -->
-    <link href="https://tarahein.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Tara Hein">
-
-    <!-- mobile -->
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <script>
-      document.documentElement.className =
-        document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
-    </script>
-
-    <!-- Theme CSS (if you have it; this file adds critical overrides below) -->
-    <link rel="stylesheet" href="/assets/css/main.css">
-    <meta http-equiv="cleartype" content="on">
-
-    <!-- Site icons (all point to headshot.png beside this file) -->
-    <link rel="apple-touch-icon" sizes="57x57" href="headshot.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="headshot.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="headshot.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="headshot.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="headshot.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="headshot.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="headshot.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="headshot.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="headshot.png">
-    <link rel="icon" type="image/png" href="headshot.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="headshot.png" sizes="192x192">
-    <link rel="icon" type="image/png" href="headshot.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="headshot.png" sizes="16x16">
-    <link rel="manifest" href="manifest.json">
-    <link rel="mask-icon" href="headshot.png" color="#000000">
-    <link rel="shortcut icon" href="headshot.png">
-    <meta name="msapplication-TileColor" content="#000000">
-    <meta name="msapplication-TileImage" content="headshot.png">
-    <meta name="msapplication-config" content="browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
-
-    <!-- Academicons (for Scholar/ORCID) -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css"
-    >
-    <!-- Font Awesome (for building/envelope/LinkedIn icons) -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    >
-
-    <!-- Critical layout/styles to match the Minimal Mistakes vibe, with your tweaks -->
-    <style>
-      :root{
-        --page-w: 1100px;
-        --border:#e6e6e6;
-        --link:#0b66c3;
-        --muted:#666;
-        --text:#222;
-        --bg:#fff;
-        --nav:#6a6a6a; /* grey nav color */
-      }
-      *{box-sizing:border-box}
-      html,body{height:100%}
-      body{
-        margin:0;
-        font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-        color:var(--text); background:var(--bg); line-height:1.65;
-      }
-
-      /* Masthead / top nav */
-      .masthead{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--border)}
-      .masthead__inner-wrap{max-width:var(--page-w);margin:0 auto;padding:.7rem 1rem}
-      .masthead__menu{display:flex;align-items:center}
-      .greedy-nav{display:flex;align-items:center;width:100%}
-      .greedy-nav > button{border:0;background:transparent;width:36px;height:36px;border-radius:6px;display:none;align-items:center;justify-content:center;cursor:pointer}
-      .greedy-nav .navicon{width:20px;height:2px;background:var(--nav);position:relative}
-      .greedy-nav .navicon:before,.greedy-nav .navicon:after{content:"";position:absolute;left:0;width:20px;height:2px;background:var(--nav)}
-      .greedy-nav .navicon:before{top:-6px}.greedy-nav .navicon:after{top:6px}
-      .visible-links,.hidden-links{list-style:none;margin:0;padding:0;display:flex;gap:1rem;align-items:center}
-      .hidden{display:none}
-      .masthead__menu-item a{color:var(--nav);text-decoration:none;font-weight:600;padding:.4rem 0}
-      .masthead__menu-item a:hover{color:#444;text-decoration:underline}
-      .masthead__menu-item--lg a{font-weight:700;white-space:nowrap;color:#333}
-
-      /* Main layout: sidebar + content */
-      #main{max-width:var(--page-w);margin:0 auto;display:grid;grid-template-columns:260px 1fr;gap:2rem;padding:1.25rem 1rem 2rem}
-      .sidebar.sticky{position:sticky;top:72px;align-self:start}
-
-      /* Sidebar author card */
-      .author__avatar img{
-        width:100%;height:auto;display:block;border-radius:50%; /* round */
-        border:none; /* no frame */
-      }
-      .author__content .author__name{margin:.8rem 0 .2rem;font-size:1.25rem}
-      .author__bio{color:var(--muted);margin:0 0 .5rem}
-      .author__urls-wrapper .btn{
-        display:inline-flex;align-items:center;gap:.5rem;border-radius:8px;border:1px solid #000;background:#000;color:#fff;
-        padding:.5rem .8rem;text-decoration:none;font-weight:600;margin:.25rem 0
-      }
-      .author__urls{list-style:none;margin:.5rem 0 0;padding:0}
-      .author__urls li{margin:.35rem 0;display:flex;align-items:center}
-      .author__urls a{color:var(--link);text-decoration:none}
-      .author__urls a:hover{text-decoration:underline}
-      .icon-pad-right{margin-right:.5rem}
-
-      /* Page content */
-      .page__inner-wrap header h1{font-size:1.9rem;line-height:1.2;margin:.25rem 0 1rem}
-      .page__content a{color:var(--link)}
-      h2{font-size:1.25rem;margin:1.25rem 0 .5rem}
-      h3{margin:1rem 0 .25rem}
-      p{margin:.6rem 0}
-      .muted{color:var(--muted)}
-
-      /* Lists for research/teaching sections */
-      .tight-list{margin:.25rem 0 .75rem 1.25rem}
-      .tight-list li{margin:.2rem 0}
-
-      /* Photography masonry grid */
-      .photo-masonry { columns: 3 280px; column-gap: 10px; }
-      .photo-masonry figure { break-inside: avoid; margin: 0 0 10px; }
-      .photo-masonry img {
-        width: 100%; height: auto; display: block;
-        border-radius: 8px; border: 1px solid #e8e8e8;
-      }
-      @media (max-width: 900px){ .photo-masonry { columns: 2 260px; } }
-      @media (max-width: 600px){ .photo-masonry { columns: 1 100%; } }
-
-      /* Responsive: collapse to one column and show hamburger */
-      @media (max-width:900px){
-        #main{grid-template-columns:1fr}
-        .sidebar.sticky{position:static}
-        .greedy-nav > button{display:flex}
-        .visible-links{display:none}
-        .visible-links.open{display:flex;flex-direction:column;align-items:flex-start;padding-top:.5rem}
-      }
-    </style>
-  </head>
-
-  <body>
-    <!--[if lt IE 9]>
-      <div class="notice--danger align-center" style="margin: 0;">
-        You are using an <strong>outdated</strong> browser.
-        Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
-      </div>
-    <![endif]-->
-
-    <div class="masthead">
-      <div class="masthead__inner-wrap">
-        <div class="masthead__menu">
-          <nav id="site-nav" class="greedy-nav">
-            <button><div class="navicon"></div></button>
-
-            <ul class="visible-links">
-              <li class="masthead__menu-item masthead__menu-item--lg">
-                <a href="https://tarahein.github.io/">Tara Hein</a>
-              </li>
-              <li class="masthead__menu-item"><a href="#research">Research</a></li>
-              <li class="masthead__menu-item"><a href="#teaching">Teaching</a></li>
-              <li class="masthead__menu-item"><a href="#writing">Commentary &amp; Analysis</a></li>
-              <li class="masthead__menu-item"><a href="#photography">Photography</a></li>
-              <li class="masthead__menu-item">
-                <a href="2025.11.05%20Hein_CV_V1.pdf" target="_blank" rel="noopener">CV</a>
-              </li>
-            </ul>
-
-            <ul class="hidden-links hidden"></ul>
-          </nav>
-        </div>
-      </div>
+<head>
+  <meta charset="utf-8">
+  <title>Tara Hein</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css">
+  <style>
+    :root{--page-w:1100px;--border:#e6e6e6;--link:#0b66c3;--muted:#666;--text:#222;--bg:#fff;--nav:#6a6a6a}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+         color:var(--text);background:var(--bg);line-height:1.65;}
+    .masthead{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--border)}
+    .masthead__inner-wrap{max-width:var(--page-w);margin:0 auto;padding:.7rem 1rem}
+    .masthead__menu{display:flex;align-items:center}
+    .greedy-nav{display:flex;align-items:center;width:100%}
+    .visible-links{list-style:none;display:flex;gap:1rem;margin:0;padding:0}
+    .masthead__menu-item a{color:var(--nav);text-decoration:none;font-weight:600}
+    .masthead__menu-item a:hover{text-decoration:underline}
+    #main{max-width:var(--page-w);margin:0 auto;display:grid;grid-template-columns:260px 1fr;gap:2rem;padding:1.25rem 1rem 2rem}
+    .sidebar{position:sticky;top:72px;align-self:start}
+    .author__avatar img{width:100%;border-radius:50%;border:none;display:block}
+    .author__bio{color:var(--muted)}
+    .author__urls{list-style:none;margin:.5rem 0 0;padding:0}
+    .author__urls li{margin:.35rem 0}
+    .page__title{font-size:1.9rem;margin-bottom:1rem}
+    a{color:var(--link)}
+    @media(max-width:900px){#main{grid-template-columns:1fr}.sidebar{position:static}}
+  </style>
+</head>
+<body>
+  <div class="masthead">
+    <div class="masthead__inner-wrap">
+      <nav id="site-nav" class="greedy-nav">
+        <ul class="visible-links">
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="index.html">Tara Hein</a></li>
+          <li class="masthead__menu-item"><a href="research.html">Research</a></li>
+          <li class="masthead__menu-item"><a href="teaching.html">Teaching</a></li>
+          <li class="masthead__menu-item"><a href="photography.html">Photography</a></li>
+          <li class="masthead__menu-item"><a href="2025.11.05%20Hein_CV_V1.pdf" target="_blank">CV</a></li>
+        </ul>
+      </nav>
     </div>
+  </div>
 
-    <div id="main" role="main">
-      <div class="sidebar sticky">
-        <div itemscope itemtype="http://schema.org/Person">
-          <div class="author__avatar">
-            <img src="headshot.png" class="author__avatar" alt="Tara Hein">
-          </div>
+  <div id="main">
+    <aside class="sidebar">
+      <div class="author__avatar"><img src="headshot.png" alt="Tara Hein"></div>
+      <h3 class="author__name">Tara Hein</h3>
+      <p class="author__bio">Ph.D. Student, Government, Harvard University</p>
+      <ul class="author__urls">
+        <li><i class="fa-solid fa-building-columns"></i> Harvard University</li>
+        <li><a href="mailto:tarahein@g.harvard.edu"><i class="fa-solid fa-envelope"></i> Email</a></li>
+        <li><a href="https://scholar.google.com/citations?hl=en&user=rzQtlS0AAAAJ"><i class="ai ai-google-scholar"></i> Google Scholar</a></li>
+        <li><a href="https://orcid.org/0009-0004-6474-3484"><i class="ai ai-orcid"></i> ORCID</a></li>
+        <li><a href="https://www.linkedin.com/in/tara-hein/"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+      </ul>
+    </aside>
 
-          <div class="author__content">
-            <h3 class="author__name">Tara Hein</h3>
-            <p class="author__bio">Ph.D. Student, Government</p>
-          </div>
-
-          <div class="author__urls-wrapper">
-            <a class="btn btn--inverse" href="mailto:tarahein@g.harvard.edu">
-              <i class="fa-solid fa-envelope" aria-hidden="true"></i>Email
-            </a>
-
-            <ul class="author__urls social-icons">
-              <li class="author__desktop">
-                <i class="fa-solid fa-building-columns icon-pad-right" aria-hidden="true"></i>
-                Harvard University
-              </li>
-              <li>
-                <a href="https://scholar.google.com/citations?hl=en&user=rzQtlS0AAAAJ" target="_blank" rel="noopener">
-                  <i class="ai ai-google-scholar icon-pad-right"></i>
-                  Google Scholar
-                </a>
-              </li>
-              <li>
-                <a href="https://orcid.org/0009-0004-6474-3484" target="_blank" rel="noopener">
-                  <i class="ai ai-orcid ai-fw icon-pad-right"></i>
-                  ORCID
-                </a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/in/tara-hein/" target="_blank" rel="noopener">
-                  <i class="fab fa-linkedin fa-fw icon-pad-right" aria-hidden="true"></i>
-                  LinkedIn
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-        <meta itemprop="headline" content="Welcome!">
-        <div class="page__inner-wrap">
-          <header>
-            <h1 class="page__title" itemprop="headline">Welcome!</h1>
-          </header>
-
-          <!-- About -->
-          <section id="about" class="page__content" itemprop="text">
-            <p>
-              Hi, I’m Tara. I’m a Ph.D. student and Presidential Scholar in the Department of Government at Harvard University. 
-              My research examines citizen–state relations in Latin America, focusing on how perceptions of state failure shape 
-              democratic attitudes and political behavior. I’m particularly interested in the causes and consequences of waning 
-              support for democracy in contexts with historically high-performing institutions, like Chile, Costa Rica, and Uruguay.
-            </p>
-
-            <p>
-              You can find a copy of my CV 
-              <a href="2025.11.05%20Hein_CV_V1.pdf" target="_blank" rel="noopener">here</a>.
-            </p>
-
-            <p>
-              I received my B.A. in Political Science with Distinction and Interdisciplinary Honors in Democracy, Development, and 
-              the Rule of Law from Stanford University. My award-winning honors thesis, 
-              <em>“Seeing Like a Citizen: Fragmented Citizenship in Santiago de Chile,”</em> examined how socioeconomically vulnerable 
-              individuals conceptualize and exercise their citizenship and received the 
-              <a href="https://undergrad.stanford.edu/awards-and-graduation-honors/golden-firestone-and-kennedy-thesis-awards" target="_blank" rel="noopener">
-                Firestone Medal for Excellence in Undergraduate Research
-              </a>.
-            </p>
-
-            <p>
-              I am currently a research affiliate at the 
-              <a href="https://povgov.com/" target="_blank" rel="noopener">Poverty, Violence, and Governance Lab</a> and the 
-              <a href="https://cddrl.fsi.stanford.edu/dal" target="_blank" rel="noopener">Democracy Action Lab</a>, 
-              both at Stanford University’s Center on Democracy, Development, and the Rule of Law.
-            </p>
-
-            <p>
-              I am from Monteverde, a small village in the Costa Rican cloud forest—one of the most biodiverse places on Earth. 
-              I grew up outdoors, riding horses, and attended a small bilingual Quaker school from the age of three until graduating from high school.
-            </p>
-
-            <p>
-              Before graduate school, I was the Democracy Impact Coordinator at the Latin American philanthropic organization VélezReyes+, 
-              where I developed a network of political leadership incubators across seven countries: Argentina, Brazil, Chile, Colombia, Costa Rica, Peru, and Uruguay.
-            </p>
-
-            <p>You can reach me at <a href="mailto:tarahein@g.harvard.edu">tarahein@g.harvard.edu</a>.</p>
-          </section>
-
-          <!-- Research -->
-          <section id="research" class="page__content" itemprop="text">
-            <h2>Research</h2>
-
-            <h3>Works in Progress</h3>
-            <ul class="tight-list">
-              <li><em>“Democracy in Costa Rica.”</em> In <em>Central America’s Democratic Crisis: Drivers of Backsliding and Sources of Resilience</em>, edited by Steve Levitsky and Manuel Meléndez-Sánchez (book chapter in progress).</li>
-              <li><em>“Seeing Like a Citizen: Fragmented Citizenship in Santiago de Chile.”</em> (manuscript in preparation, based on undergraduate honors thesis).</li>
-            </ul>
-
-            <h3>Research Experience</h3>
-            <ul class="tight-list">
-              <li>Research Assistant, Poverty, Violence, and Governance Lab, Stanford University — <span class="muted">2022–2023</span></li>
-              <li>Visiting Researcher, Facultad de Gobierno, Universidad de Chile — <span class="muted">2022</span></li>
-              <li>Research Assistant, Stanford Center on Poverty and Inequality — <span class="muted">2020–2021</span></li>
-            </ul>
-
-            <h3>Presentations</h3>
-            <ul class="tight-list">
-              <li>“Fragmented Citizenship.” Symposium of Undergraduate Research, Stanford University — <span class="muted">2023</span></li>
-              <li>“Fragmented Citizenship.” National Student Research Conference, Pi Sigma Alpha — <span class="muted">2023</span></li>
-              <li>“Una Ciudadanía Desigual.” Facultad de Gobierno, Universidad de Chile — <span class="muted">2022</span></li>
-            </ul>
-
-            <h3>Other Writings</h3>
-            <ul class="tight-list">
-              <li>“Meet the Candidates: Uruguay,” <em>Americas Quarterly</em> — <span class="muted">2024</span></li>
-              <li>“From Hand to Hand: Reflections on the Antorcha de la Independencia,” <em>The Tico Times</em> — <span class="muted">2023</span></li>
-              <li>“Democracy Amidst the Unearthly Tidings of Latin America,” <em>The Tico Times</em> — <span class="muted">2023</span></li>
-              <li>“Costa Rican Democracy’s Silent Alarms,” <em>The Tico Times</em> — <span class="muted">2023</span></li>
-            </ul>
-          </section>
-
-          <!-- Teaching -->
-          <section id="teaching" class="page__content" itemprop="text">
-            <h2>Teaching</h2>
-            <ul class="tight-list">
-              <li>Undergraduate TA, PUBLPOL 141: <em>Monitoring the Crisis</em>, Stanford University — <span class="muted">2020–2021</span></li>
-            </ul>
-          </section>
-
-          <!-- Writing (anchor target for nav) -->
-          <section id="writing" class="page__content" itemprop="text">
-            <h2>Commentary &amp; Analysis</h2>
-            <p class="muted">See “Other Writings” in the Research section above for recent pieces.</p>
-          </section>
-
-          <!-- Photography -->
-          <section id="photography" class="page__content" itemprop="text">
-            <h2>Photography</h2>
-            <p class="muted">A few shots from fieldwork and home.</p>
-
-            <div class="photo-masonry">
-              <figure><img src="DSC09457.JPG" alt="Photo 1"></figure>
-              <figure><img src="6E85A52E-589C-4B1E-8223-B311E3F2D518.jpg" alt="Photo 2"></figure>
-              <figure><img src="DSC08791.JPG" alt="Photo 3"></figure>
-              <figure><img src="AB1AB1F1-A590-4756-AF0B-CE62948C9D9F.jpg" alt="Photo 4"></figure>
-              <figure><img src="DSC00310.JPG" alt="Photo 5"></figure>
-              <figure><img src="DSC08466.JPG" alt="Photo 6"></figure>
-              <figure><img src="4B126550-F957-494C-9FBB-16026E8C24CC.jpg" alt="Photo 7"></figure>
-              <figure><img src="DSC07935.JPG" alt="Photo 8"></figure>
-              <figure><img src="5277CB0A-8BD8-47AC-9E68-E219C19C3E06.jpg" alt="Photo 9"></figure>
-              <figure><img src="DSC08796.JPG" alt="Photo 10"></figure>
-              <figure><img src="DSC00321.JPG" alt="Photo 11"></figure>
-              <figure><img src="DSC09533.JPG" alt="Photo 12"></figure>
-              <figure><img src="DSC00326.JPG" alt="Photo 13"></figure>
-              <figure><img src="7C9950E5-24FD-4530-9823-9B47D4473AF3.jpg" alt="Photo 14"></figure>
-              <figure><img src="IMG_3352.jpeg" alt="Photo 15"></figure>
-              <figure><img src="DSC00262.JPG" alt="Photo 16"></figure>
-              <figure><img src="DSC00312.JPG" alt="Photo 17"></figure>
-              <figure><img src="DSC00239.JPG" alt="Photo 18"></figure>
-              <figure><img src="DSC00493.JPG" alt="Photo 19"></figure>
-              <figure><img src="DSC08483.JPG" alt="Photo 20"></figure>
-            </div>
-          </section>
-
-          <footer class="page__meta"></footer>
-        </div>
-      </article>
-    </div>
-
-    <!-- Tiny JS to toggle mobile nav (replaces external theme JS) -->
-    <script>
-      (function(){
-        var btn = document.querySelector('.greedy-nav > button');
-        var links = document.querySelector('.visible-links');
-        if(btn && links){
-          btn.addEventListener('click', function(){
-            links.classList.toggle('open');
-          });
-        }
-      })();
-    </script>
-
-    <!-- (Optional) Google Analytics: add your own GA4 ID if you want analytics
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
-    </script>
-    -->
-  </body>
+    <article class="page">
+      <h1 class="page__title">Welcome!</h1>
+      <p>Hi, I’m Tara. I’m a Ph.D. student and Presidential Scholar in the Department of Government at Harvard University. 
+      My research examines citizen–state relations in Latin America, focusing on how perceptions of state failure shape democratic attitudes and political behavior.</p>
+      <p>You can find a copy of my CV <a href="2025.11.05%20Hein_CV_V1.pdf" target="_blank">here</a>.</p>
+      <p>I received my B.A. in Political Science with Distinction and Interdisciplinary Honors in Democracy, Development, and 
+      the Rule of Law from Stanford University. My award-winning honors thesis, <em>“Seeing Like a Citizen: Fragmented Citizenship in Santiago de Chile,”</em> 
+      received the <a href="https://undergrad.stanford.edu/awards-and-graduation-honors/golden-firestone-and-kennedy-thesis-awards">Firestone Medal for Excellence in Undergraduate Research</a>.</p>
+      <p>I am currently a research affiliate at the <a href="https://povgov.com/">Poverty, Violence, and Governance Lab</a> and 
+      the <a href="https://cddrl.fsi.stanford.edu/dal">Democracy Action Lab</a> at Stanford University’s Center on Democracy, Development, and the Rule of Law.</p>
+    </article>
+  </div>
+</body>
 </html>
