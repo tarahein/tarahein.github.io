@@ -2,18 +2,25 @@
 <html lang="en" class="no-js">
 <head>
   <meta charset="utf-8">
-  <title>Photography - Tara Hein</title>
+  <title>Tara Hein</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- icons/fonts -->
+
+  <!-- Icons/fonts -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css">
-  <link rel="icon" href="headshot.png">
-  <!-- same base styles as other pages + masonry -->
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="T.png">
+  <link rel="apple-touch-icon" href="T.png">
+
   <style>
     :root{--page-w:1100px;--border:#e6e6e6;--link:#0b66c3;--muted:#666;--text:#222;--bg:#fff;--nav:#6a6a6a}
     *{box-sizing:border-box}
     body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.65}
     a{color:var(--link)}
+    .muted{color:var(--muted)}
+
+    /* Masthead (grey nav) */
     .masthead{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--border)}
     .masthead__inner-wrap{max-width:var(--page-w);margin:0 auto;padding:.7rem 1rem}
     .greedy-nav{display:flex;align-items:center}
@@ -25,43 +32,41 @@
     .greedy-nav .navicon,.greedy-nav .navicon:before,.greedy-nav .navicon:after{display:block;width:20px;height:2px;background:var(--nav);content:"";position:relative}
     .greedy-nav .navicon:before{position:absolute;top:-6px}
     .greedy-nav .navicon:after{position:absolute;top:6px}
+
+    /* Layout */
     #main{max-width:var(--page-w);margin:0 auto;display:grid;grid-template-columns:260px 1fr;gap:2rem;padding:1.25rem 1rem 2rem}
     .sidebar{position:sticky;top:72px;align-self:start}
+
+    /* Sidebar content */
     .author__avatar img{width:100%;display:block;border-radius:50%;border:none}
+    .author__name{margin:.75rem 0 .25rem}
     .author__bio{color:var(--muted);margin:.25rem 0 .75rem}
     .author__urls{list-style:none;margin:.5rem 0 0;padding:0}
     .author__urls li{margin:.35rem 0}
+
     .page__title{font-size:1.9rem;margin:.25rem 0 1rem}
-    /* Masonry */
-    .photo-masonry { columns: 3 280px; column-gap: 10px; }
-    .photo-masonry figure { break-inside: avoid; margin: 0 0 10px; }
-    .photo-masonry img { width: 100%; height: auto; display: block; border-radius: 8px; border: 1px solid #e8e8e8; }
+
+    /* Masonry photo grid */
+    .photo-masonry{columns:3 280px;column-gap:10px}
+    .photo-masonry figure{break-inside:avoid;margin:0 0 10px}
+    .photo-masonry img{width:100%;height:auto;display:block;border-radius:8px;border:1px solid #e8e8e8}
+
+    /* --- Mobile layout (match Manuel) --- */
     @media (max-width:900px){
-      #main{grid-template-columns:1fr}
-      .sidebar{position:static}
+      .sidebar{display:none}
+      #main{display:block;padding:0 1.25rem 2rem}
       .greedy-nav > button{display:block}
       .visible-links{display:none;flex-direction:column;align-items:flex-start;padding-top:.5rem}
       .visible-links.open{display:flex}
-      .photo-masonry { columns: 2 260px; }
     }
-    @media (max-width:600px){ .photo-masonry { columns: 1 100%; } }
-    /* Responsive photo size for smaller screens */
-@media (max-width: 900px) {
-  .author__avatar img {
-    width: 140px;
-    height: 140px;
-    margin: 0 auto 1rem;
-    display: block;
-  }
-}
 
-@media (max-width: 600px) {
-  .author__avatar img {
-    width: 120px;
-    height: 120px;
-  }
-}
-
+    /* Mobile author card (shown when sidebar is hidden) */
+    .author-card-mobile{display:none;align-items:center;gap:.75rem;padding:1rem 0 .25rem;border-bottom:1px solid var(--border);margin-bottom:1rem}
+    .author-card-mobile img{width:48px;height:48px;border-radius:50%;object-fit:cover;display:block}
+    .author-card-name{font-weight:700;line-height:1.15}
+    .author-card-sub{color:#6a6a6a;font-size:.95rem}
+    .author-card-follow{margin-left:auto;border:1px solid #d0d0d0;border-radius:6px;padding:.35rem .7rem;text-decoration:none;color:#333;font-weight:600;font-size:.95rem;background:#fff}
+    @media (max-width:900px){.author-card-mobile{display:flex}}
   </style>
 </head>
 <body>
@@ -81,6 +86,17 @@
   </div>
 
   <div id="main" role="main">
+    <!-- Mobile author header -->
+    <div class="author-card-mobile">
+      <img src="headshot.png" alt="Tara Hein">
+      <div>
+        <div class="author-card-name">Tara Hein</div>
+        <div class="author-card-sub">Ph.D. Student, Government</div>
+        <div class="author-card-sub">Harvard University</div>
+      </div>
+      <a class="author-card-follow" href="mailto:tarahein@g.harvard.edu">Email</a>
+    </div>
+
     <aside class="sidebar">
       <div class="author__avatar"><img src="headshot.png" alt="Tara Hein"></div>
       <h3 class="author__name">Tara Hein</h3>
@@ -130,3 +146,4 @@
   </script>
 </body>
 </html>
+
