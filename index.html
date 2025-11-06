@@ -1,182 +1,282 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="utf-8">
+  <title>Welcome! - Tara Hein</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tara Hein</title>
+  <meta name="description" content="Ph.D. Student · Department of Government, Harvard University. Citizen–state relations in Latin America." />
+
+  <!-- Open Graph / SEO -->
+  <meta property="og:locale" content="en-US">
+  <meta property="og:site_name" content="Tara Hein">
+  <meta property="og:title" content="Welcome!">
+  <meta property="og:description" content="Ph.D. Student · Department of Government, Harvard University. Citizen–state relations in Latin America.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="/">
+  
+  <!-- Schema.org Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Person",
+    "name": "Tara Hein",
+    "url": "/",
+    "email": "mailto:tarahein@g.harvard.edu",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "Harvard University"
+    }
+  }
+  </script>
+
+  <!-- Swap no-js -> js -->
+  <script>
+    document.documentElement.className =
+      document.documentElement.className.replace(/\bno-js\b/g,'') + ' js';
+  </script>
+
   <style>
-    :root { --w: 780px; --link: #0b66c3; --muted:#5b5b5b; }
+    :root {
+      --page-w: 1100px;
+      --link: #0b66c3;
+      --muted:#5b5b5b;
+      --border:#e7e7e7;
+      --bg:#ffffff;
+      --text:#222;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
     body {
       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-      margin:2.5rem auto; padding:0 1.1rem;
-      line-height:1.65; color:#222; max-width:var(--w);
+      color:var(--text); background:var(--bg); margin:0;
+      line-height:1.65;
     }
-    header {
-      display:grid;
-      grid-template-columns:180px 1fr;
-      gap:1.75rem;
-      align-items:center;
-      margin-bottom:1.5rem;
-    }
-    header img {
-      width:180px;
-      height:auto;
-      object-fit:cover;
-      border-radius:8px; /* rectangular headshot with soft corners */
-      border:1px solid #e5e5e5;
-    }
-    h1 {font-size:1.9rem; margin:0; line-height:1.2;}
-    .subtitle {color:var(--muted); margin-top:.25rem;}
-    nav {
-      border-top:1px solid #e9e9e9;
-      border-bottom:1px solid #e9e9e9;
-      margin:1rem 0 1.5rem;
-    }
-    nav a {
-      display:inline-block;
-      padding:.6rem .2rem;
-      margin-right:1rem;
-      color:inherit;
-      text-decoration:none;
-      font-weight:600;
-    }
-    nav a:hover {color:var(--link); text-decoration:underline;}
-    section {padding:.25rem 0 1.25rem;}
-    h2 {font-size:1.25rem; margin:1.25rem 0 .5rem;}
-    p {margin:.6rem 0;}
-    a {color:var(--link);}
-    .muted {color:var(--muted);}
-    ul {padding-left:1.2rem;}
 
-    /* Masonry photo grid */
-    .photo-masonry {
-      columns: 3 280px;
-      column-gap: 10px;
+    /* Masthead (top nav) */
+    .masthead {
+      border-bottom:1px solid var(--border);
+      background:#fff;
+      position:sticky; top:0; z-index:100;
     }
-    .photo-masonry figure {
-      break-inside: avoid;
-      margin: 0 0 10px;
+    .masthead__inner {
+      margin:0 auto; max-width:var(--page-w);
+      display:flex; align-items:center; gap:1rem;
+      padding:.75rem 1rem;
     }
+    .site-title {
+      font-weight:700; text-decoration:none; color:inherit;
+      margin-right:1rem; white-space:nowrap;
+    }
+    .greedy-nav { display:flex; align-items:center; width:100%; }
+    .greedy-nav .links { display:flex; flex-wrap:wrap; gap:1rem; }
+    .greedy-nav a {
+      text-decoration:none; color:inherit; font-weight:600;
+      padding:.35rem 0;
+    }
+    .greedy-nav a:hover { color:var(--link); text-decoration:underline; }
+
+    /* Sidebar + main layout */
+    #main {
+      margin:0 auto; max-width:var(--page-w);
+      display:grid; grid-template-columns: 260px 1fr; gap:2rem;
+      padding:1.25rem 1rem 2rem;
+    }
+    .sidebar {
+      position:sticky; top:76px; align-self:start;
+    }
+    .card {
+      border:1px solid var(--border); border-radius:10px;
+      padding:1rem; background:#fff;
+    }
+    .author__avatar img {
+      width:100%; height:auto; display:block; border-radius:10px;
+      border:1px solid var(--border);
+    }
+    .author__name { margin:.8rem 0 .2rem; font-size:1.25rem; }
+    .author__bio { color:var(--muted); margin:0 0 .4rem; }
+    .author__meta { color:var(--muted); font-size:.95rem; }
+    .author__urls { list-style:none; padding:0; margin:.75rem 0 0; }
+    .author__urls li { margin:.25rem 0; }
+    .author__urls a { color:var(--link); text-decoration:none; }
+    .author__urls a:hover { text-decoration:underline; }
+
+    /* Page article */
+    article.page header h1 {
+      font-size:1.9rem; line-height:1.2; margin:.25rem 0 1rem;
+    }
+    section { padding:.25rem 0 1.25rem; }
+    h2 { font-size:1.25rem; margin:1.25rem 0 .5rem; }
+    p { margin:.6rem 0; }
+    a { color:var(--link); }
+
+    /* Your original masonry photo grid (unchanged) */
+    .photo-masonry { columns: 3 280px; column-gap: 10px; }
+    .photo-masonry figure { break-inside: avoid; margin: 0 0 10px; }
     .photo-masonry img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 8px;
-      border: 1px solid #e8e8e8;
+      width: 100%; height: auto; display: block;
+      border-radius: 8px; border: 1px solid #e8e8e8;
     }
-    @media (max-width: 900px){
-      .photo-masonry { columns: 2 260px; }
-    }
-    @media (max-width: 600px){
-      .photo-masonry { columns: 1 100%; }
-    }
+    @media (max-width: 900px){ .photo-masonry { columns: 2 260px; } }
+    @media (max-width: 600px){ .photo-masonry { columns: 1 100%; } }
 
-    footer {
-      border-top:1px solid #e9e9e9;
-      margin-top:1rem;
-      padding-top:.9rem;
-      color:#666;
-      font-size:.95rem;
+    /* Footer */
+    footer.page-footer {
+      border-top:1px solid var(--border);
+      color:#666; font-size:.95rem;
+      margin-top:1rem; padding:1rem 1rem 2rem;
     }
-    @media (max-width:700px){
-      header{grid-template-columns:120px 1fr;}
-      header img{width:120px;}
+    footer .inner { margin:0 auto; max-width:var(--page-w); }
+
+    /* Responsive: collapse to single column */
+    @media (max-width: 900px){
+      #main { grid-template-columns: 1fr; }
+      .sidebar { position:static; order:-1; }
     }
   </style>
 </head>
 <body>
-
-<header>
-  <img src="headshot.png" alt="Portrait of Tara Hein" />
-  <div>
-    <h1>Tara Hein</h1>
-    <div class="subtitle">Ph.D. Student · Department of Government, Harvard University</div>
-    <div class="muted">Citizen–state relations in Latin America</div>
+  <!-- Masthead -->
+  <div class="masthead">
+    <div class="masthead__inner">
+      <a href="#" class="site-title">Tara Hein</a>
+      <nav class="greedy-nav" aria-label="Primary">
+        <div class="links">
+          <a href="#about">About</a>
+          <a href="#working">Working Papers</a>
+          <a href="#photography">Photography</a>
+          <a href="#cv" title="Curriculum Vitae">CV</a>
+          <a href="mailto:tarahein@g.harvard.edu">Email</a>
+        </div>
+      </nav>
+    </div>
   </div>
-</header>
 
-<!-- About -->
-<section id="about">
-  <p>
-    Hi, I’m Tara. I’m a Ph.D. student and Presidential Scholar in the Department of Government at Harvard University. 
-    My research examines citizen–state relations in Latin America, focusing on how perceptions of state failure shape 
-    democratic attitudes and political behavior. I’m particularly interested in the causes and consequences of waning 
-    support for democracy in contexts with historically high-performing institutions, like Chile, Costa Rica, and Uruguay.
-  </p>
+  <!-- Main -->
+  <div id="main" role="main">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="card">
+        <div class="author__avatar">
+          <img src="headshot.png" alt="Portrait of Tara Hein">
+        </div>
+        <h3 class="author__name">Tara Hein</h3>
+        <p class="author__bio">Ph.D. Student</p>
+        <p class="author__meta">Department of Government, Harvard University</p>
+        <ul class="author__urls">
+          <li><a href="mailto:tarahein@g.harvard.edu">tarahein@g.harvard.edu</a></li>
+          <!-- Optional: add Google Scholar / ORCID / X if you like -->
+          <!-- <li><a href="#">Google Scholar</a></li> -->
+          <!-- <li><a href="#">ORCID</a></li> -->
+          <!-- <li><a href="#">X (formerly Twitter)</a></li> -->
+        </ul>
+      </div>
+    </aside>
 
-  <p>
-    I received my B.A. in Political Science with Distinction and Interdisciplinary Honors in Democracy, Development, and 
-    the Rule of Law from Stanford University. My award-winning honors thesis, <em>“Seeing Like a Citizen: Fragmented Citizenship in Santiago 
-    de Chile,”</em> examined how socioeconomically vulnerable individuals conceptualize and exercise their citizenship.
-  </p>
+    <!-- Page -->
+    <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+      <header>
+        <h1 class="page__title" itemprop="headline">Welcome!</h1>
+      </header>
 
-  <p>
-    I am from Monteverde, a small village in the Costa Rican cloud forest—one of the most biodiverse places on Earth. 
-    I grew up outdoors, riding horses, and attended a small bilingual Quaker school from the age of three until graduating from high school.
-  </p>
+      <section id="about" itemprop="text">
+        <p>
+          Hi, I’m Tara. I’m a Ph.D. student and Presidential Scholar in the Department of Government at Harvard University. 
+          My research examines citizen–state relations in Latin America, focusing on how perceptions of state failure shape 
+          democratic attitudes and political behavior. I’m particularly interested in the causes and consequences of waning 
+          support for democracy in contexts with historically high-performing institutions, like Chile, Costa Rica, and Uruguay.
+        </p>
 
-  <p>
-    Before graduate school, I was the Democracy Impact Coordinator at the Latin American philanthropic organization VélezReyes+, 
-    where I developed a network of political leadership incubators across 7 countries: Argentina, Brazil, Chile, Colombia, Costa Rica, Peru, and Uruguay.
-  </p>
+        <p>
+          I received my B.A. in Political Science with Distinction and Interdisciplinary Honors in Democracy, Development, and 
+          the Rule of Law from Stanford University. My award-winning honors thesis, <em>“Seeing Like a Citizen: Fragmented Citizenship in Santiago 
+          de Chile,”</em> examined how socioeconomically vulnerable individuals conceptualize and exercise their citizenship.
+        </p>
 
-  <p>
-    I am currently a research affiliate at the Poverty, Violence, and Governance Lab and the Democracy Action Lab, 
-    both at Stanford University’s Center on Democracy, Development, and the Rule of Law.
-  </p>
+        <p>
+          I am from Monteverde, a small village in the Costa Rican cloud forest—one of the most biodiverse places on Earth. 
+          I grew up outdoors, riding horses, and attended a small bilingual Quaker school from the age of three until graduating from high school.
+        </p>
 
-  <p>
-    You can reach me at <a href="mailto:tarahein@g.harvard.edu">tarahein@g.harvard.edu</a>.
-  </p>
+        <p>
+          Before graduate school, I was the Democracy Impact Coordinator at the Latin American philanthropic organization VélezReyes+, 
+          where I developed a network of political leadership incubators across 7 countries: Argentina, Brazil, Chile, Colombia, Costa Rica, Peru, and Uruguay.
+        </p>
 
-  <p><strong><a href="2025.11.05 Hein_CV_V1.pdf" target="_blank" rel="noopener">Curriculum Vitae</a></strong></p>
-</section>
+        <p>
+          I am currently a research affiliate at the Poverty, Violence, and Governance Lab and the Democracy Action Lab, 
+          both at Stanford University’s Center on Democracy, Development, and the Rule of Law.
+        </p>
 
-<section id="working">
-  <h2>Working Papers</h2>
-  <ul>
-    <li><em>“Democracy in Costa Rica.”</em> In <em>Central America’s Democratic Crisis: Drivers of Backsliding and Sources of Resilience</em>, 
-        edited by Steve Levitsky and Manuel Meléndez-Sánchez (book chapter in progress).</li>
-    <li><em>“Seeing Like a Citizen: Fragmented Citizenship in Santiago de Chile.”</em> (manuscript in preparation, based on undergraduate honors thesis).</li>
-  </ul>
-</section>
+        <p>
+          You can reach me at <a href="mailto:tarahein@g.harvard.edu">tarahein@g.harvard.edu</a>.
+        </p>
+      </section>
 
-<section id="photography">
-  <h2>Photography</h2>
-  <p class="muted">A few shots from fieldwork and home.</p>
+      <section id="working">
+        <h2>Working Papers</h2>
+        <ul>
+          <li><em>“Democracy in Costa Rica.”</em> In <em>Central America’s Democratic Crisis: Drivers of Backsliding and Sources of Resilience</em>, 
+              edited by Steve Levitsky and Manuel Meléndez-Sánchez (book chapter in progress).</li>
+          <li><em>“Seeing Like a Citizen: Fragmented Citizenship in Santiago de Chile.”</em> (manuscript in preparation, based on undergraduate honors thesis).</li>
+        </ul>
+      </section>
 
-  <div class="photo-masonry">
-    <figure><img src="DSC09457.JPG" alt="Photo 1"></figure>
-    <figure><img src="6E85A52E-589C-4B1E-8223-B311E3F2D518.jpg" alt="Photo 2"></figure>
-    <figure><img src="DSC08791.JPG" alt="Photo 3"></figure>
-    <figure><img src="AB1AB1F1-A590-4756-AF0B-CE62948C9D9F.jpg" alt="Photo 4"></figure>
-    <figure><img src="DSC00310.JPG" alt="Photo 5"></figure>
-    <figure><img src="DSC08466.JPG" alt="Photo 6"></figure>
-    <figure><img src="4B126550-F957-494C-9FBB-16026E8C24CC.jpg" alt="Photo 7"></figure>
-    <figure><img src="DSC07935.JPG" alt="Photo 8"></figure>
-    <figure><img src="5277CB0A-8BD8-47AC-9E68-E219C19C3E06.jpg" alt="Photo 9"></figure>
-    <figure><img src="DSC08796.JPG" alt="Photo 10"></figure>
-    <figure><img src="DSC00321.JPG" alt="Photo 11"></figure>
-    <figure><img src="DSC09533.JPG" alt="Photo 12"></figure>
-    <figure><img src="DSC00326.JPG" alt="Photo 13"></figure>
-    <figure><img src="7C9950E5-24FD-4530-9823-9B47D4473AF3.jpg" alt="Photo 14"></figure>
-    <figure><img src="IMG_3352.jpeg" alt="Photo 15"></figure>
-    <figure><img src="DSC00262.JPG" alt="Photo 16"></figure>
-    <figure><img src="DSC00312.JPG" alt="Photo 17"></figure>
-    <figure><img src="DSC00239.JPG" alt="Photo 18"></figure>
-    <figure><img src="DSC00493.JPG" alt="Photo 19"></figure>
-    <figure><img src="DSC08483.JPG" alt="Photo 20"></figure>
+      <section id="photography">
+        <h2>Photography</h2>
+        <p class="muted">A few shots from fieldwork and home.</p>
+
+        <!-- Your original masonry stays exactly the same -->
+        <div class="photo-masonry">
+          <figure><img src="DSC09457.JPG" alt="Photo 1"></figure>
+          <figure><img src="6E85A52E-589C-4B1E-8223-B311E3F2D518.jpg" alt="Photo 2"></figure>
+          <figure><img src="DSC08791.JPG" alt="Photo 3"></figure>
+          <figure><img src="AB1AB1F1-A590-4756-AF0B-CE62948C9D9F.jpg" alt="Photo 4"></figure>
+          <figure><img src="DSC00310.JPG" alt="Photo 5"></figure>
+          <figure><img src="DSC08466.JPG" alt="Photo 6"></figure>
+          <figure><img src="4B126550-F957-494C-9FBB-16026E8C24CC.jpg" alt="Photo 7"></figure>
+          <figure><img src="DSC07935.JPG" alt="Photo 8"></figure>
+          <figure><img src="5277CB0A-8BD8-47AC-9E68-E219C19C3E06.jpg" alt="Photo 9"></figure>
+          <figure><img src="DSC08796.JPG" alt="Photo 10"></figure>
+          <figure><img src="DSC00321.JPG" alt="Photo 11"></figure>
+          <figure><img src="DSC09533.JPG" alt="Photo 12"></figure>
+          <figure><img src="DSC00326.JPG" alt="Photo 13"></figure>
+          <figure><img src="7C9950E5-24FD-4530-9823-9B47D4473AF3.jpg" alt="Photo 14"></figure>
+          <figure><img src="IMG_3352.jpeg" alt="Photo 15"></figure>
+          <figure><img src="DSC00262.JPG" alt="Photo 16"></figure>
+          <figure><img src="DSC00312.JPG" alt="Photo 17"></figure>
+          <figure><img src="DSC00239.JPG" alt="Photo 18"></figure>
+          <figure><img src="DSC00493.JPG" alt="Photo 19"></figure>
+          <figure><img src="DSC08483.JPG" alt="Photo 20"></figure>
+        </div>
+      </section>
+
+      <section id="cv">
+        <h2>Curriculum Vitae</h2>
+        <p><strong><a href="2025.11.05 Hein_CV_V1.pdf" target="_blank" rel="noopener">Download my CV</a></strong></p>
+      </section>
+
+      <footer class="page-footer">
+        <div class="inner">
+          © <span id="year"></span> Tara Hein · Built with GitHub Pages
+        </div>
+      </footer>
+    </article>
   </div>
-</section>
 
-<footer>
-  © <span id="year"></span> Tara Hein · Built with GitHub Pages
-</footer>
+  <!-- GA (optional). Replace G-XXXX with your tag or remove entirely -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date()); gtag('config', 'G-XXXX');
+  </script>
+  -->
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-
+  <script>
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
 
