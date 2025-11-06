@@ -13,21 +13,10 @@
   <meta property="og:description" content="Ph.D. Student · Department of Government, Harvard University. Citizen–state relations in Latin America.">
   <meta property="og:type" content="website">
   <link rel="canonical" href="/">
-  
-  <!-- Schema.org Person -->
-  <script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "Person",
-    "name": "Tara Hein",
-    "url": "/",
-    "email": "mailto:tarahein@g.harvard.edu",
-    "affiliation": {
-      "@type": "CollegeOrUniversity",
-      "name": "Harvard University"
-    }
-  }
-  </script>
+
+  <!-- Icons (Font Awesome + Academicons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css">
 
   <!-- Swap no-js -> js -->
   <script>
@@ -81,9 +70,7 @@
       display:grid; grid-template-columns: 260px 1fr; gap:2rem;
       padding:1.25rem 1rem 2rem;
     }
-    .sidebar {
-      position:sticky; top:76px; align-self:start;
-    }
+    .sidebar { position:sticky; top:76px; align-self:start; }
     .card {
       border:1px solid var(--border); border-radius:10px;
       padding:1rem; background:#fff;
@@ -96,9 +83,19 @@
     .author__bio { color:var(--muted); margin:0 0 .4rem; }
     .author__meta { color:var(--muted); font-size:.95rem; }
     .author__urls { list-style:none; padding:0; margin:.75rem 0 0; }
-    .author__urls li { margin:.25rem 0; }
+    .author__urls li { margin:.35rem 0; display:flex; align-items:center; }
     .author__urls a { color:var(--link); text-decoration:none; }
     .author__urls a:hover { text-decoration:underline; }
+    .icon-pad-right { margin-right:.5rem; }
+    .btn {
+      cursor:pointer; border:1px solid var(--border); background:#fff;
+      padding:.5rem .8rem; border-radius:8px; font-weight:600;
+      display:inline-flex; align-items:center; gap:.5rem;
+      text-decoration:none; color:#000;
+    }
+    .btn:hover { background:#f6f6f6; }
+    .btn--primary { background:#000; color:#fff; border-color:#000; }
+    .btn--primary:hover { opacity:.9; }
 
     /* Page article */
     article.page header h1 {
@@ -162,12 +159,30 @@
         <h3 class="author__name">Tara Hein</h3>
         <p class="author__bio">Ph.D. Student</p>
         <p class="author__meta">Department of Government, Harvard University</p>
-        <ul class="author__urls">
-          <li><a href="mailto:tarahein@g.harvard.edu">tarahein@g.harvard.edu</a></li>
-          <!-- Optional: add Google Scholar / ORCID / X if you like -->
-          <!-- <li><a href="#">Google Scholar</a></li> -->
-          <!-- <li><a href="#">ORCID</a></li> -->
-          <!-- <li><a href="#">X (formerly Twitter)</a></li> -->
+
+        <!-- Icon list -->
+        <ul class="author__urls social-icons">
+          <!-- Affiliation -->
+          <li class="author__desktop">
+            <i class="fa-solid fa-building-columns icon-pad-right" aria-hidden="true"></i>
+            Harvard University
+          </li>
+
+          <!-- Email button -->
+          <li>
+            <a class="btn btn--primary" href="mailto:tarahein@g.harvard.edu" aria-label="Email Tara Hein">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              Email
+            </a>
+          </li>
+
+          <!-- LinkedIn -->
+          <li>
+            <a href="https://www.linkedin.com/in/tara-hein/" target="_blank" rel="noopener">
+              <i class="fa-brands fa-linkedin icon-pad-right" aria-hidden="true"></i>
+              LinkedIn
+            </a>
+          </li>
         </ul>
       </div>
     </aside>
@@ -189,7 +204,15 @@
         <p>
           I received my B.A. in Political Science with Distinction and Interdisciplinary Honors in Democracy, Development, and 
           the Rule of Law from Stanford University. My award-winning honors thesis, <em>“Seeing Like a Citizen: Fragmented Citizenship in Santiago 
-          de Chile,”</em> examined how socioeconomically vulnerable individuals conceptualize and exercise their citizenship.
+          de Chile,”</em> examined how socioeconomically vulnerable individuals conceptualize and exercise their citizenship and received the 
+          <a href="https://undergrad.stanford.edu/awards-and-graduation-honors/golden-firestone-and-kennedy-thesis-awards" target="_blank" rel="noopener">Firestone Medal for Excellence in Undergraduate Research</a>.
+        </p>
+
+        <p>
+          I am currently a research affiliate at the 
+          <a href="https://povgov.com/" target="_blank" rel="noopener">Poverty, Violence, and Governance Lab</a> and the 
+          <a href="https://cddrl.fsi.stanford.edu/dal" target="_blank" rel="noopener">Democracy Action Lab</a>, 
+          both at Stanford University’s Center on Democracy, Development, and the Rule of Law.
         </p>
 
         <p>
@@ -200,11 +223,6 @@
         <p>
           Before graduate school, I was the Democracy Impact Coordinator at the Latin American philanthropic organization VélezReyes+, 
           where I developed a network of political leadership incubators across 7 countries: Argentina, Brazil, Chile, Colombia, Costa Rica, Peru, and Uruguay.
-        </p>
-
-        <p>
-          I am currently a research affiliate at the Poverty, Violence, and Governance Lab and the Democracy Action Lab, 
-          both at Stanford University’s Center on Democracy, Development, and the Rule of Law.
         </p>
 
         <p>
@@ -263,20 +281,9 @@
     </article>
   </div>
 
-  <!-- GA (optional). Replace G-XXXX with your tag or remove entirely -->
-  <!--
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date()); gtag('config', 'G-XXXX');
-  </script>
-  -->
-
   <script>
     // Footer year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
-
