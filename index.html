@@ -10,7 +10,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css">
 
   <!-- Favicon -->
-  <link rel="icon" href="headshot.png">
+  <link rel="icon" type="image/png" href="T.png">
+  <link rel="apple-touch-icon" href="T.png">
 
   <style>
     :root{--page-w:1100px;--border:#e6e6e6;--link:#0b66c3;--muted:#666;--text:#222;--bg:#fff;--nav:#6a6a6a}
@@ -18,7 +19,7 @@
     body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.65}
     a{color:var(--link)}
 
-    /* Masthead (grey nav like Manuel) */
+    /* Masthead (grey nav) */
     .masthead{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--border)}
     .masthead__inner-wrap{max-width:var(--page-w);margin:0 auto;padding:.7rem 1rem}
     .greedy-nav{display:flex;align-items:center}
@@ -46,26 +47,20 @@
 
     /* --- Mobile layout (match Manuel) --- */
     @media (max-width:900px){
-      /* Hide full sidebar; single-column content */
       .sidebar{display:none}
       #main{display:block;padding:0 1.25rem 2rem}
-
-      /* Mobile menu button + stacked links */
       .greedy-nav > button{display:block}
       .visible-links{display:none;flex-direction:column;align-items:flex-start;padding-top:.5rem}
       .visible-links.open{display:flex}
     }
 
-    /* Mobile author card (shown only under 900px) */
+    /* Mobile author card (shown when sidebar is hidden) */
     .author-card-mobile{display:none;align-items:center;gap:.75rem;padding:1rem 0 .25rem;border-bottom:1px solid var(--border);margin-bottom:1rem}
     .author-card-mobile img{width:48px;height:48px;border-radius:50%;object-fit:cover;display:block}
     .author-card-name{font-weight:700;line-height:1.15}
     .author-card-sub{color:#6a6a6a;font-size:.95rem}
     .author-card-follow{margin-left:auto;border:1px solid #d0d0d0;border-radius:6px;padding:.35rem .7rem;text-decoration:none;color:#333;font-weight:600;font-size:.95rem;background:#fff}
-
-    @media (max-width:900px){
-      .author-card-mobile{display:flex}
-    }
+    @media (max-width:900px){.author-card-mobile{display:flex}}
   </style>
 </head>
 <body>
@@ -85,7 +80,7 @@
   </div>
 
   <div id="main" role="main">
-    <!-- Mobile author header (appears when sidebar is hidden) -->
+    <!-- Mobile author header -->
     <div class="author-card-mobile">
       <img src="headshot.png" alt="Tara Hein">
       <div>
