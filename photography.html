@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Photography - Tara Hein</title>
+  <link rel="stylesheet" href="index.html">
+  <style>
+    .photo-masonry { columns: 3 280px; column-gap: 10px; }
+    .photo-masonry figure { break-inside: avoid; margin: 0 0 10px; }
+    .photo-masonry img {
+      width: 100%; height: auto; display: block;
+      border-radius: 8px; border: 1px solid #e8e8e8;
+    }
+    @media (max-width: 900px){ .photo-masonry { columns: 2 260px; } }
+    @media (max-width: 600px){ .photo-masonry { columns: 1 100%; } }
+  </style>
+</head>
+<body>
+  <!-- same header/sidebar -->
+  <article class="page">
+    <h1 class="page__title">Photography</h1>
+    <p>A few shots from fieldwork and home.</p>
+    <div class="photo-masonry">
+      <!-- your image tags -->
+      <figure><img src="DSC09457.JPG" alt="Photo 1"></figure>
+      <figure><img src="6E85A52E-589C-4B1E-8223-B311E3F2D518.jpg" alt="Photo 2"></figure>
+      <!-- add the rest of your images -->
+    </div>
+  </article>
+</body>
+</html>
