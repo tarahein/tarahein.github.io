@@ -1,165 +1,487 @@
 <!doctype html>
 <html lang="en" class="no-js">
+
 <head>
   <meta charset="utf-8">
-  <title>Tara Hein</title>
+  <title>Teaching | Tara Hein</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Icons/fonts -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  >
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css"
+  >
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="T.png">
   <link rel="apple-touch-icon" href="T.png">
 
   <style>
-    :root{--page-w:1100px;--border:#e6e6e6;--link:#0b66c3;--muted:#666;--text:#222;--bg:#fff;--nav:#6a6a6a}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.65}
-    a{color:var(--link)}
-    .muted{color:var(--muted)}
-
-    /* Masthead (grey nav) */
-    .masthead{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--border)}
-    .masthead__inner-wrap{max-width:var(--page-w);margin:0 auto;padding:.7rem 1rem}
-    .greedy-nav{display:flex;align-items:center}
-    .visible-links{list-style:none;display:flex;gap:1rem;margin:0;padding:0}
-    .masthead__menu-item a{color:var(--nav);text-decoration:none;font-weight:600}
-    .masthead__menu-item a:hover{text-decoration:underline}
-    .masthead__menu-item--lg a{font-weight:700;color:#333;white-space:nowrap}
-    .greedy-nav > button{display:none;border:0;background:transparent;width:36px;height:36px;border-radius:6px;cursor:pointer}
-    .greedy-nav .navicon,.greedy-nav .navicon:before,.greedy-nav .navicon:after{display:block;width:20px;height:2px;background:var(--nav);content:"";position:relative}
-    .greedy-nav .navicon:before{position:absolute;top:-6px}
-    .greedy-nav .navicon:after{position:absolute;top:6px}
-
-    /* Layout */
-    #main{max-width:var(--page-w);margin:0 auto;display:grid;grid-template-columns:260px 1fr;gap:2rem;padding:1.25rem 1rem 2rem}
-    .sidebar{position:sticky;top:72px;align-self:start}
-
-    /* Sidebar content */
-    .author__avatar img{width:100%;display:block;border-radius:50%;border:none}
-    .author__name{margin:.75rem 0 .25rem}
-    .author__bio{color:var(--muted);margin:.25rem 0 .75rem}
-    .author__urls{list-style:none;margin:.5rem 0 0;padding:0}
-    .author__urls li{margin:.35rem 0}
-
-    .page__title{font-size:1.9rem;margin:.25rem 0 1rem}
-
-    /* Masonry photo grid */
-    .photo-masonry{columns:3 280px;column-gap:10px}
-    .photo-masonry figure{break-inside:avoid;margin:0 0 10px}
-    .photo-masonry img{width:100%;height:auto;display:block;border-radius:8px;border:1px solid #e8e8e8}
-
-    /* --- Mobile layout (match Manuel) --- */
-    @media (max-width:900px){
-      .sidebar{display:none}
-      #main{display:block;padding:0 1.25rem 2rem}
-      .greedy-nav > button{display:block}
-      .visible-links{display:none;flex-direction:column;align-items:flex-start;padding-top:.5rem}
-      .visible-links.open{display:flex}
+    :root {
+      --page-w: 1100px;
+      --border: #e6e6e6;
+      --link: #0b66c3;
+      --muted: #666;
+      --text: #222;
+      --bg: #fff;
+      --nav: #6a6a6a;
     }
 
-    /* Mobile author card (shown when sidebar is hidden) */
-    .author-card-mobile{display:none;align-items:center;gap:.75rem;padding:1rem 0 .25rem;border-bottom:1px solid var(--border);margin-bottom:1rem}
-    .author-card-mobile img{width:48px;height:48px;border-radius:50%;object-fit:cover;display:block}
-    .author-card-name{font-weight:700;line-height:1.15}
-    .author-card-sub{color:#6a6a6a;font-size:.95rem}
-    .author-card-follow{margin-left:auto;border:1px solid #d0d0d0;border-radius:6px;padding:.35rem .7rem;text-decoration:none;color:#333;font-weight:600;font-size:.95rem;background:#fff}
-    @media (max-width:900px){.author-card-mobile{display:flex}}
- /* === Nav: push items to the right & lighten style === */
-.visible-links{ width:100%; }                               /* list spans row */
-.visible-links .masthead__menu-item--lg{ margin-right:auto; } /* title left, rest right */
+    * {
+      box-sizing: border-box;
+    }
 
-.masthead__menu-item a{
-  color:#6e6e6e;                /* lighter grey like Manuel's */
-  font-weight:500;
-  padding:.55rem .35rem;        /* tighter */
-  letter-spacing:.2px;
-}
-.masthead__menu-item a:hover{ color:#3a3a3a; text-decoration:underline; }
-.masthead__menu-item--lg a{ color:#333; font-weight:700; font-size:1rem; }
+    body {
+      margin: 0;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.65;
+    }
 
-@media (max-width:900px){
-  .visible-links .masthead__menu-item--lg{ margin-right:0; } /* reset for stacked menu */
-}
+    a {
+      color: var(--link);
+    }
 
-/* === Sidebar: muted links & tidy icon alignment === */
-.author__bio{ color:#7a7a7a; font-size:.95rem; }
-.author__urls{ margin-top:.75rem; }
-.author__urls li{
-  display:flex; align-items:center; gap:.45rem;
-  margin:.35rem 0; color:#444; font-size:.95rem;     /* smaller, grey text */
-}
-.author__urls i{
-  width:1.1rem; text-align:center; font-size:.95rem; color:#6e6e6e;
-}
-.author__urls a{ color:inherit; text-decoration:none; font-weight:500; }
-.author__urls a:hover{ color:var(--link); text-decoration:underline; }
+    .muted {
+      color: var(--muted);
+    }
 
-/* Slightly cap avatar size for balance on desktop */
-.sidebar .author__avatar{ max-width:180px; }
-.sidebar .author__avatar img{ width:100%; height:auto; border-radius:50%; }
+    /* =========================
+       Masthead / Navigation
+       ========================= */
 
-/* === Content readability like his === */
-.page{ max-width:48rem; }                   /* comfortable line length */
-.page a:hover{ color:#0a55a4; }             /* subtle hover color */
- </style>
+    .masthead {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .masthead__inner-wrap {
+      max-width: var(--page-w);
+      margin: 0 auto;
+      padding: 0.7rem 1rem;
+    }
+
+    .greedy-nav {
+      display: flex;
+      align-items: center;
+    }
+
+    .visible-links {
+      width: 100%;
+      display: flex;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .visible-links .masthead__menu-item--lg {
+      margin-right: auto;
+    }
+
+    .masthead__menu-item a {
+      color: #6e6e6e;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.55rem 0.35rem;
+      letter-spacing: 0.2px;
+    }
+
+    .masthead__menu-item a:hover {
+      color: #3a3a3a;
+      text-decoration: underline;
+    }
+
+    .masthead__menu-item--lg a {
+      color: #333;
+      font-size: 1rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    /* Hamburger menu */
+
+    .greedy-nav > button {
+      display: none;
+      width: 36px;
+      height: 36px;
+      border: 0;
+      border-radius: 6px;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .greedy-nav .navicon,
+    .greedy-nav .navicon::before,
+    .greedy-nav .navicon::after {
+      position: relative;
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: var(--nav);
+      content: "";
+    }
+
+    .greedy-nav .navicon::before {
+      position: absolute;
+      top: -6px;
+    }
+
+    .greedy-nav .navicon::after {
+      position: absolute;
+      top: 6px;
+    }
+
+    /* =========================
+       Main layout
+       ========================= */
+
+    #main {
+      max-width: var(--page-w);
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 2rem;
+      margin: 0 auto;
+      padding: 1.25rem 1rem 2rem;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 72px;
+      align-self: start;
+    }
+
+    .page {
+      max-width: 48rem;
+    }
+
+    .page__title {
+      margin: 0.25rem 0 1rem;
+      font-size: 1.9rem;
+    }
+
+    .page a:hover {
+      color: #0a55a4;
+    }
+
+    /* =========================
+       Sidebar
+       ========================= */
+
+    .sidebar .author__avatar {
+      max-width: 180px;
+    }
+
+    .sidebar .author__avatar img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: none;
+      border-radius: 0;
+    }
+
+    .author__name {
+      margin: 0.75rem 0 0.25rem;
+    }
+
+    .author__bio {
+      margin: 0.25rem 0 0.75rem;
+      color: #7a7a7a;
+      font-size: 0.95rem;
+    }
+
+    .author__urls {
+      margin: 0.75rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .author__urls li {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      margin: 0.35rem 0;
+      color: #444;
+      font-size: 0.95rem;
+    }
+
+    .author__urls i {
+      width: 1.1rem;
+      color: #6e6e6e;
+      font-size: 0.95rem;
+      text-align: center;
+    }
+
+    .author__urls a {
+      color: inherit;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .author__urls a:hover {
+      color: var(--link);
+      text-decoration: underline;
+    }
+
+    /* =========================
+       Mobile author card
+       ========================= */
+
+    .author-card-mobile {
+      display: none;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+      padding: 1rem 0 0.25rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .author-card-mobile img {
+      display: block;
+      width: 64px;
+      height: 48px;
+      border-radius: 0;
+      object-fit: cover;
+    }
+
+    .author-card-name {
+      font-weight: 700;
+      line-height: 1.15;
+    }
+
+    .author-card-sub {
+      color: #6a6a6a;
+      font-size: 0.95rem;
+    }
+
+    .author-card-follow {
+      margin-left: auto;
+      padding: 0.35rem 0.7rem;
+      border: 1px solid #d0d0d0;
+      border-radius: 6px;
+      color: #333;
+      background: #fff;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    /* =========================
+       Mobile layout
+       ========================= */
+
+    @media (max-width: 900px) {
+      .sidebar {
+        display: none;
+      }
+
+      #main {
+        display: block;
+        padding: 0 1.25rem 2rem;
+      }
+
+      .author-card-mobile,
+      .page {
+        max-width: 46rem;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .author-card-mobile {
+        display: flex;
+      }
+
+      .greedy-nav > button {
+        display: block;
+      }
+
+      .visible-links {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 0.5rem;
+      }
+
+      .visible-links.open {
+        display: flex;
+      }
+
+      .visible-links .masthead__menu-item--lg {
+        margin-right: 0;
+      }
+    }
+  </style>
 </head>
-</head>
+
 <body>
+
+  <!-- Navigation -->
   <div class="masthead">
     <div class="masthead__inner-wrap">
       <nav id="site-nav" class="greedy-nav">
-        <button aria-label="Toggle menu"><div class="navicon"></div></button>
+        <button type="button" aria-label="Toggle menu">
+          <span class="navicon"></span>
+        </button>
+
         <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg"><a href="index.html">Tara Hein</a></li>
-          <li class="masthead__menu-item"><a href="research.html">Research</a></li>
-          <li class="masthead__menu-item"><a href="teaching.html">Teaching</a></li>
-          <li class="masthead__menu-item"><a href="photography.html">Photography</a></li>
-          <li class="masthead__menu-item"><a href="2025.11.05%20Hein_CV_V1.pdf" target="_blank" rel="noopener">CV</a></li>
+          <li class="masthead__menu-item masthead__menu-item--lg">
+            <a href="index.html">Tara Hein</a>
+          </li>
+
+          <li class="masthead__menu-item">
+            <a href="research.html">Research</a>
+          </li>
+
+          <li class="masthead__menu-item">
+            <a href="teaching.html">Teaching</a>
+          </li>
+
+          <li class="masthead__menu-item">
+            <a href="photography.html">Photography</a>
+          </li>
+
+          <li class="masthead__menu-item">
+            <a
+              href="2025.11.05%20Hein_CV_V1.pdf"
+              target="_blank"
+              rel="noopener"
+            >
+              CV
+            </a>
+          </li>
         </ul>
       </nav>
     </div>
   </div>
 
+  <!-- Main content -->
   <div id="main" role="main">
+
+    <!-- Mobile author card -->
+    <div class="author-card-mobile">
+      <img src="IMG_9645.png" alt="Tara Hein">
+
+      <div>
+        <div class="author-card-name">Tara Hein</div>
+        <div class="author-card-sub">Ph.D. Student, Government</div>
+        <div class="author-card-sub">Harvard University</div>
+      </div>
+
+      <a
+        class="author-card-follow"
+        href="mailto:tarahein@g.harvard.edu"
+      >
+        Email
+      </a>
+    </div>
+
+    <!-- Desktop sidebar -->
     <aside class="sidebar">
-      <div class="author__avatar"><img src="headshot.png" alt="Tara Hein"></div>
+      <div class="author__avatar">
+        <img src="IMG_9645.png" alt="Tara Hein">
+      </div>
+
       <h3 class="author__name">Tara Hein</h3>
-      <p class="author__bio">Ph.D. Student, Government</p>
+
+      <p class="author__bio">
+        Ph.D. Student, Government
+      </p>
+
       <ul class="author__urls">
-        <li><i class="fa-solid fa-building-columns"></i> Harvard University</li>
-        <li><a href="mailto:tarahein@g.harvard.edu"><i class="fa-solid fa-envelope"></i> Email</a></li>
-        <li><a href="https://www.linkedin.com/in/tara-hein/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+        <li>
+          <i
+            class="fa-solid fa-building-columns"
+            aria-hidden="true"
+          ></i>
+          Harvard University
+        </li>
+
+        <li>
+          <a href="mailto:tarahein@g.harvard.edu">
+            <i
+              class="fa-solid fa-envelope"
+              aria-hidden="true"
+            ></i>
+            Email
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="https://www.linkedin.com/in/tara-hein/"
+            target="_blank"
+            rel="noopener"
+          >
+            <i
+              class="fab fa-linkedin"
+              aria-hidden="true"
+            ></i>
+            LinkedIn
+          </a>
+        </li>
       </ul>
     </aside>
 
+    <!-- Teaching -->
     <article class="page">
       <h1 class="page__title">Teaching</h1>
-      <ul>
-  <li>
-    Undergraduate TA, 
-    <a href="https://explorecourses.stanford.edu/search?view=catalog&filter-coursestatus-Active=on&q=PUBLPOL%20141:%20Monitoring%20the%20Crisis&academicYear=20202021" target="_blank" rel="noopener">
-      PUBLPOL 141: <em>Monitoring the Crisis</em>
-    </a>, 
-    Stanford University — 2020–2021.<br>
-    Taught with 
-    <a href="https://grusky.people.stanford.edu/" target="_blank" rel="noopener">
-      Professor David Grusky
-    </a>.
-  </li>
-</ul>
 
+      <ul>
+        <li>
+          Undergraduate TA,
+          <a
+            href="https://explorecourses.stanford.edu/search?view=catalog&amp;filter-coursestatus-Active=on&amp;q=PUBLPOL%20141:%20Monitoring%20the%20Crisis&amp;academicYear=20202021"
+            target="_blank"
+            rel="noopener"
+          >
+            PUBLPOL 141: <em>Monitoring the Crisis</em>
+          </a>,
+          Stanford University — 2020–2021.
+          <br>
+          Taught with
+          <a
+            href="https://grusky.people.stanford.edu/"
+            target="_blank"
+            rel="noopener"
+          >
+            Professor David Grusky
+          </a>.
+        </li>
+      </ul>
     </article>
+
   </div>
 
+  <!-- Mobile navigation -->
   <script>
-    (function(){
-      var btn=document.querySelector('.greedy-nav > button');
-      var links=document.querySelector('.visible-links');
-      if(btn&&links){btn.addEventListener('click',function(){links.classList.toggle('open');});}
+    (function () {
+      var button = document.querySelector(".greedy-nav > button");
+      var links = document.querySelector(".visible-links");
+
+      if (button && links) {
+        button.addEventListener("click", function () {
+          links.classList.toggle("open");
+        });
+      }
     })();
   </script>
+
 </body>
 </html>
