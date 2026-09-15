@@ -37,7 +37,7 @@
     .sidebar{position:sticky;top:72px;align-self:start}
 
     /* Sidebar content */
-    .author__avatar img{width:100%;display:block;border-radius:50%;border:none}
+    .author__avatar img{width:100%;display:block;border-radius:0;border:none}
     .author__name{margin:.75rem 0 .25rem}
     .author__bio{color:var(--muted);margin:.25rem 0 .75rem}
     .author__urls{list-style:none;margin:.5rem 0 0;padding:0}
@@ -65,7 +65,7 @@
 
     /* Mobile author card (shown when sidebar is hidden) */
     .author-card-mobile{display:none;align-items:center;gap:.75rem;padding:1rem 0 .25rem;border-bottom:1px solid var(--border);margin-bottom:1rem}
-    .author-card-mobile img{width:48px;height:48px;border-radius:50%;object-fit:cover;display:block}
+    .author-card-mobile img{width:64px;height:48px;border-radius:0;object-fit:cover;display:block}
     .author-card-name{font-weight:700;line-height:1.15}
     .author-card-sub{color:#6a6a6a;font-size:.95rem}
     .author-card-follow{margin-left:auto;border:1px solid #d0d0d0;border-radius:6px;padding:.35rem .7rem;text-decoration:none;color:#333;font-weight:600;font-size:.95rem;background:#fff}
@@ -103,7 +103,7 @@
 
 /* Slightly cap avatar size for balance on desktop */
 .sidebar .author__avatar{ max-width:180px; }
-.sidebar .author__avatar img{ width:100%; height:auto; border-radius:50%; }
+.sidebar .author__avatar img{ width:100%; height:auto; border-radius:0; }
 
 /* === Content readability like his === */
 .page{ max-width:48rem; }                   /* comfortable line length */
@@ -215,5 +215,4 @@
   </script>
 </body>
 </html>
-
 
